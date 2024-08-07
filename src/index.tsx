@@ -13,16 +13,45 @@ import SignupForm from "./routes/Auth/Signup";
 import SignInPage from "./routes/Auth/SignIn";
 import ProfilePage from "./components/Profile";
 
+//routes
+import Landing from './routes/landing';
+import QuestionsList from './routes/Questions/QuestionsList';
+import QuestionDetails from './routes/Questions/QuestionDetails';
+import CreateQuestion from './routes/Questions/CreateQuestion';
+import QuestionChat from './routes/Questions/QuestionChat';
+
+
+
 const router = createBrowserRouter([
   /*Start of landing*/ {
     path: "/",
-    element: [<Root />],
+    element: <Root />,
     errorElement: <ErrorPage />,
     children: [
       {
+        path: "/",
+        element: <Landing/>
+      },
+      {
+        path: "/questions",
+        element: <QuestionsList/>
+      },
+      {
+        path: "/questions/:q_id",
+        element: <QuestionDetails/>
+      },
+      {
+        path: "/questions/create",
+        element: <CreateQuestion/>
+      },
+      {
+        path: "/questions/:q_id/chat",
+        element: <QuestionChat/>
+      },
+      {
         path: "/whichquestion",
         element: [
-          <Appbar />,
+          
           <div
             id="whichquestion"
             style={{
@@ -115,33 +144,7 @@ const router = createBrowserRouter([
           </>,
         ],
       },
-      {
-        path: "/",
-        element: [
-          <>
-            <Appbar />
-            <div
-              style={{
-                textAlign: "center",
-                backgroundImage:
-                  "url(https://static.vecteezy.com/system/resources/previews/025/390/760/original/studying-together-club-illustration-vector.jpg)",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-                backgroundAttachment: "fixed",
-                height: "95vh",
-              }}
-            >
-              <h1
-                className="display-1"
-                style={{ fontSize: "100px", color: "darkblue" }}
-              >
-                Student Algorithm; Peer Power!
-              </h1>
-            </div>
-          </>,
-        ],
-      },
+      
       {
         path: "/LogOut",
         element: [
