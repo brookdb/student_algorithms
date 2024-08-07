@@ -56,7 +56,6 @@ const router = createBrowserRouter([
       {
         path: "/whichquestion",
         element: [
-          <Appbar />,
           <div
             id="whichquestion"
             style={{
