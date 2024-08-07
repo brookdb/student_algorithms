@@ -17,7 +17,7 @@ import Posts from "./components/Posts"
 const router = createBrowserRouter([
   /*Start of landing*/ {
     path: "/",
-    element: [<Appbar /> ,<Root />],
+    element: [<Root />],
     errorElement: <ErrorPage />,
     children: [
       {
