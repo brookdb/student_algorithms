@@ -17,7 +17,7 @@ import Posts from "./components/Posts"
 const router = createBrowserRouter([
   /*Start of landing*/ {
     path: "/",
-    element: [<Root />],
+    element: [<Appbar /> ,<Root />],
     errorElement: <ErrorPage />,
     children: [
       {
@@ -27,7 +27,6 @@ const router = createBrowserRouter([
       {
         path: "/whichquestion",
         element: [
-          <Appbar />,
           <div
             id="whichquestion"
             style={{
@@ -56,7 +55,6 @@ const router = createBrowserRouter([
         path: "/Answerques",
         element: [
           <>
-            <Appbar />
             <div
               style={{
                 textAlign: "center",
@@ -79,7 +77,6 @@ const router = createBrowserRouter([
         path: "/Writeques",
         element: [
           <>
-            <Appbar />
             <div
               style={{
                 textAlign: "center",
@@ -102,7 +99,6 @@ const router = createBrowserRouter([
         path: "/chat",
         element: [
           <>
-            <Appbar />
             <div
               style={{
                 textAlign: "center",
@@ -124,7 +120,6 @@ const router = createBrowserRouter([
         path: "/",
         element: [
           <>
-            <Appbar />
             <div
               style={{
                 textAlign: "center",
@@ -151,7 +146,6 @@ const router = createBrowserRouter([
         path: "/LogOut",
         element: [
           <>
-            <Appbar />
             <div
               style={{
                 textAlign: "center",
@@ -181,7 +175,6 @@ const router = createBrowserRouter([
       {
         path: "/Settings",
         element: [
-          <Appbar />,
           <div>
             <h1>Settings</h1>
           </div>,
@@ -190,7 +183,6 @@ const router = createBrowserRouter([
       {
         path: "/Profile",
         element: [
-          <Appbar />,
           <div>
             <h1>Your Profile</h1>
           </div>,
