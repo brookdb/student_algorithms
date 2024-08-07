@@ -21,6 +21,7 @@ import CreateQuestion from './routes/Questions/CreateQuestion';
 import QuestionChat from './routes/Questions/QuestionChat';
 
 
+import Posts from "./components/Posts"
 
 const router = createBrowserRouter([
   /*Start of landing*/ {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
     element: <Root />,
     errorElement: <ErrorPage />,
     children: [
+      {
+        path: "/homescreen",
+        element: <Posts />
+      },
       {
         path: "/",
         element: <Landing/>
@@ -51,7 +56,7 @@ const router = createBrowserRouter([
       {
         path: "/whichquestion",
         element: [
-          
+          <Appbar />,
           <div
             id="whichquestion"
             style={{
@@ -80,7 +85,6 @@ const router = createBrowserRouter([
         path: "/Answerques",
         element: [
           <>
-            <Appbar />
             <div
               style={{
                 textAlign: "center",
@@ -103,7 +107,6 @@ const router = createBrowserRouter([
         path: "/Writeques",
         element: [
           <>
-            <Appbar />
             <div
               style={{
                 textAlign: "center",
@@ -126,7 +129,6 @@ const router = createBrowserRouter([
         path: "/chat",
         element: [
           <>
-            <Appbar />
             <div
               style={{
                 textAlign: "center",
@@ -144,12 +146,37 @@ const router = createBrowserRouter([
           </>,
         ],
       },
-      
+      {
+        path: "/",
+        element: [
+          <>
+            <Appbar />
+            <div
+              style={{
+                textAlign: "center",
+                backgroundImage:
+                  "url(https://static.vecteezy.com/system/resources/previews/025/390/760/original/studying-together-club-illustration-vector.jpg)",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                backgroundAttachment: "fixed",
+                height: "95vh",
+              }}
+            >
+              <h1
+                className="display-1"
+                style={{ fontSize: "100px", color: "darkblue" }}
+              >
+                Student Algorithm; Peer Power!
+              </h1>
+            </div>
+          </>,
+        ],
+      },
       {
         path: "/LogOut",
         element: [
           <>
-            <Appbar />
             <div
               style={{
                 textAlign: "center",
@@ -179,7 +206,6 @@ const router = createBrowserRouter([
       {
         path: "/Settings",
         element: [
-          <Appbar />,
           <div>
             <h1>Settings</h1>
           </div>,
@@ -188,7 +214,6 @@ const router = createBrowserRouter([
       {
         path: "/Profile",
         element: [
-          <Appbar />,
           <div>
             <h1>Your Profile</h1>
           </div>,
