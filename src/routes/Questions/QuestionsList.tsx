@@ -10,60 +10,6 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Searchbar from '../../components/Searchbar';
 
-/*
-function Card1() {
-  return (
-    <Card style={{ width: "300p" }}>
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Subtitle className="mb-2 text-muted">Math</Card.Subtitle>
-        <Card.Link href="#">
-          <Card.Text>Does anyone know the answer to...</Card.Text>
-        </Card.Link>
-      </Card.Body>
-    </Card>
-  );
-}
-
-function Card2() {
-  return (
-    <Card style={{ width: "300p" }}>
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Subtitle className="mb-2 text-muted">Math</Card.Subtitle>
-        <Card.Link href="#">
-          <Card.Text>Does anyone know the answer to...</Card.Text>
-        </Card.Link>
-      </Card.Body>
-    </Card>
-  );
-
-
-
-
-
-
-  <div
-        id="Searchbox"
-        style={{
-          textAlign: "center",
-        }}
-      >
-        <textarea
-          style={{
-            resize: "none",
-            backgroundColor: "transparent",
-            margin: "0",
-            padding: "0",
-            color: "black",
-            wordWrap: "break-word",
-            outline: "none",
-            WebkitTapHighlightColor: "transparent",
-          }}
-        ></textarea>
-      </div>
-}*/
-
 const questions = [
     {
         id: 0,
