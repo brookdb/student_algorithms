@@ -12,23 +12,35 @@ import Searchbar from '../../components/Searchbar';
 
 const questions = [
     {
-        id: 0,
+        id: 1,
         title: "Question 1",
         body: "alsjdfnglasfnglsdngldsnflgn adslfkgnldsfngldsnfglksdfnglsdknfg",
         image: "https://cdn.theatlantic.com/thumbor/Ot_erThCQgVVk016M-nKJrG_HhE=/603x0:4203x2700/1200x900/media/img/mt/2023/01/Dumb_Questions_02/original.jpg"
     },
     {
-        id: 1,
+        id: 2,
         title: "Question 2",
         body: "alsjdfnglasfnglsdngldsnflgn adslfkgnldsfngldsnfglksdfnglsdknfg",
         image: "https://cdn.theatlantic.com/thumbor/Ot_erThCQgVVk016M-nKJrG_HhE=/603x0:4203x2700/1200x900/media/img/mt/2023/01/Dumb_Questions_02/original.jpg"
     },
     {
-        id: 2,
+        id: 3,
         title: "Question 3",
         body: "alsjdfnglasfnglsdngldsnflgn adslfkgnldsfngldsnfglksdfnglsdknfg",
         image: "https://cdn.theatlantic.com/thumbor/Ot_erThCQgVVk016M-nKJrG_HhE=/603x0:4203x2700/1200x900/media/img/mt/2023/01/Dumb_Questions_02/original.jpg"
-    }
+    },
+    {
+      id: 4,
+      title: "Question 4",
+      body: "alsjdfnglasfnglsdngldsnflgn adslfkgnldsfngldsnfglksdfnglsdknfg",
+      image: "https://cdn.theatlantic.com/thumbor/Ot_erThCQgVVk016M-nKJrG_HhE=/603x0:4203x2700/1200x900/media/img/mt/2023/01/Dumb_Questions_02/original.jpg"
+  },
+  {
+    id: 5,
+    title: "Question 5",
+    body: "alsjdfnglasfnglsdngldsnflgn adslfkgnldsfngldsnfglksdfnglsdknfg",
+    image: "https://cdn.theatlantic.com/thumbor/Ot_erThCQgVVk016M-nKJrG_HhE=/603x0:4203x2700/1200x900/media/img/mt/2023/01/Dumb_Questions_02/original.jpg"
+}
 ]
 
 export default function QuestionsList(){
