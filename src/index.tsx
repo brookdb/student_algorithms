@@ -20,9 +20,6 @@ import QuestionDetails from './routes/Questions/QuestionDetails';
 import CreateQuestion from './routes/Questions/CreateQuestion';
 import QuestionChat from './routes/Questions/QuestionChat';
 
-
-import Posts from "./components/Posts"
-
 const router = createBrowserRouter([
   /*Start of landing*/ {
     path: "/",
