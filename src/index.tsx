@@ -12,6 +12,7 @@ import ErrorPage from "./routes/error-page";
 import SignupForm from "./routes/Auth/Signup";
 import SignInPage from "./routes/Auth/SignIn";
 import ProfilePage from "./components/Profile";
+import Posts from "./components/Posts"
 
 const router = createBrowserRouter([
   /*Start of landing*/ {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
     element: [<Root />],
     errorElement: <ErrorPage />,
     children: [
+      {
+        path: "/homescreen",
+        element: <Posts />
+      },
       {
         path: "/whichquestion",
         element: [
