@@ -10,55 +10,40 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Searchbar from '../../components/Searchbar';
 
-const questions = [
-    {
-        id: 1,
-        title: "Question 1",
-        body: "alsjdfnglasfnglsdngldsnflgn adslfkgnldsfngldsnfglksdfnglsdknfg",
-        image: "https://cdn.theatlantic.com/thumbor/Ot_erThCQgVVk016M-nKJrG_HhE=/603x0:4203x2700/1200x900/media/img/mt/2023/01/Dumb_Questions_02/original.jpg"
-    },
-    {
-        id: 2,
-        title: "Question 2",
-        body: "alsjdfnglasfnglsdngldsnflgn adslfkgnldsfngldsnfglksdfnglsdknfg",
-        image: "https://cdn.theatlantic.com/thumbor/Ot_erThCQgVVk016M-nKJrG_HhE=/603x0:4203x2700/1200x900/media/img/mt/2023/01/Dumb_Questions_02/original.jpg"
-    },
-    {
-        id: 3,
-        title: "Question 3",
-        body: "alsjdfnglasfnglsdngldsnflgn adslfkgnldsfngldsnfglksdfnglsdknfg",
-        image: "https://cdn.theatlantic.com/thumbor/Ot_erThCQgVVk016M-nKJrG_HhE=/603x0:4203x2700/1200x900/media/img/mt/2023/01/Dumb_Questions_02/original.jpg"
-    },
-    {
-      id: 4,
-      title: "Question 4",
-      body: "alsjdfnglasfnglsdngldsnflgn adslfkgnldsfngldsnfglksdfnglsdknfg",
-      image: "https://cdn.theatlantic.com/thumbor/Ot_erThCQgVVk016M-nKJrG_HhE=/603x0:4203x2700/1200x900/media/img/mt/2023/01/Dumb_Questions_02/original.jpg"
-  },
-  {
-    id: 5,
-    title: "Question 5",
-    body: "alsjdfnglasfnglsdngldsnflgn adslfkgnldsfngldsnfglksdfnglsdknfg",
-    image: "https://cdn.theatlantic.com/thumbor/Ot_erThCQgVVk016M-nKJrG_HhE=/603x0:4203x2700/1200x900/media/img/mt/2023/01/Dumb_Questions_02/original.jpg"
-}
-]
-
 export default function QuestionsList(){
-    return ( 
+
+    const [questions, setQuestions] = useState();
+    useEffect(()=>{
+        const url = 'https://66a70d6653c13f22a3ce5251.mockapi.io/questions'
+        axios.get(url).then((response)=>{
+            console.log(response.data)
+            setQuestions(response.data)
+        })
+    })
+
+    return (
+        questions?
         <Container>
             <Row><Searchbar/></Row>
-
         {questions.map((question)=>(
             <Link to={`/questions/${question.id}`}>
             <Row>
                 
                 <Col xs={3}><Image width={100} src={question.image} rounded/></Col>
                 <Col xs={9}><h1>{question.title}</h1>
-                <p>{question.body}</p></Col>
+                </Col>
                 
             </Row>
             </ Link>
         ))}
+        </Container>
+        :
+        <Container>
+        <Row>
+        <Col>
+        <h1>No Questions</h1>
+        </Col>
+        </Row>
         </Container>
     )
 }
