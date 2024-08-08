@@ -1,0 +1,18 @@
+.card-body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-img{
+    width: 20%;
+}
+
+.list-tile .image-wrapper{
+  display: flex;
+  flex-direction: column;
+  aspect-ratio: 1.75;
+  overflow: hidden;
+  justify-content: center;
+  border-top-left-radius: 0.375 rem;
+  border-top-right-radius: 0.375 rem;
+}

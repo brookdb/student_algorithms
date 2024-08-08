@@ -31,11 +31,17 @@ export default function QuestionsList(){
         {questions.map((question)=>(
             <Link to={`/questions/${question.id}`}>
             <Row>
-                
-                <Col xs={3}><Image width={100} src={question.image} rounded/></Col>
-                <Col xs={9}><h1>{question.title}</h1>
+                <Card className="list-tile">
+                <Card.Body>
+                    <div className="image-wrapper">
+                    <Col xs={3}><Card.Img width={100} src={question.image}/></Col>
+                    </div>
+                <Card.Title className="display-5">
+                    <Col xs={9}><h1>{question.title}</h1>
                 </Col>
-                
+                </Card.Title>
+                </Card.Body>
+                </Card>
             </Row>
             </ Link>
         ))}
