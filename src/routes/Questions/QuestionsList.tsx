@@ -9,6 +9,7 @@ import axios from "axios";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Searchbar from '../../components/Searchbar';
+import QuestionButton from "../../components/CreateQuestionButton"
 
 export default function QuestionsList(){
 
@@ -24,7 +25,12 @@ export default function QuestionsList(){
     return (
         questions?
         <Container>
+            <Col>
             <Row><Searchbar/></Row>
+            <Col>
+            <Row><QuestionButton/></Row>
+            </Col>
+            </Col>
         {questions.map((question)=>(
             <Link to={`/questions/${question.id}`}>
             <Row>
