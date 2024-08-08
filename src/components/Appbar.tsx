@@ -25,8 +25,8 @@ function CollapsibleExample() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <a href="whichquestion">Questions</a>
-            <a href="chat">Chat with others!</a>
+            <Link to="/questions">Questions</Link>
+            <Link to="/chat">Chat with others!</Link>
           </Nav>
           <Nav>
             <NavDropdown
