@@ -9,7 +9,7 @@ import SignupForm from "../routes/Auth/Signup";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-function CollapsibleExample() {
+function Appbar() {
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
       <Container>
@@ -52,4 +52,4 @@ function CollapsibleExample() {
   );
 }
 
-export default CollapsibleExample;
+export default Appbar;
