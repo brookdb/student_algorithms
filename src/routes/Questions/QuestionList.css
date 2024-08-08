@@ -30,7 +30,7 @@
   padding: 0;
 }
 
-.card-body:hover {
+.list-tile .card-body:hover {
  border-color: blue;
  box-shadow: 0px 24px 48px 0 rgba(0, 0, 0, 0.16);
 }
