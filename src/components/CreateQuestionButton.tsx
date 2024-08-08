@@ -5,7 +5,7 @@ function CreateQuestionButton() {
   return (
     <>
     <Link to={"/questions/create"}>
-      <Button type="submit">Button</Button>{' '}
+      <Button type="submit">Create Question</Button>{' '}
       </Link>
     </>
   );

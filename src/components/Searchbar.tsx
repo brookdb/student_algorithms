@@ -10,9 +10,6 @@ export default function Searchbar(){
               className=" mr-sm-2"
             />
           </Col>
-          <Col xs="auto">
-            <Button type="submit">Submit</Button>
-          </Col>
         </Row>
       </Form></>)
 }

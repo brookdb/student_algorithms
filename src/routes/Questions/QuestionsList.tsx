@@ -25,12 +25,9 @@ export default function QuestionsList(){
     return (
         questions?
         <Container>
-            <Col>
-            <Row><Searchbar/></Row>
-            <Col>
-            <Row><QuestionButton/></Row>
-            </Col>
-            </Col>
+            <Row>
+            <Col><QuestionButton/></Col><Col><Searchbar/></Col></Row>
+
         {questions.map((question)=>(
             <Link to={`/questions/${question.id}`}>
             <Row>
